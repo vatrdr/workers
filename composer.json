@@ -1,0 +1,44 @@
+{
+    "name": "vatradar/workers",
+    "description": "Queue workers for crunching data",
+    "type": "project",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Vatradar\\Workers\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "VATRadar Devs",
+            "email": "dev@vatradar.net"
+        }
+    ],
+    "require": {
+        "influxdata/influxdb-client-php": "^3",
+        "appwrite/appwrite": "^7",
+        "bunny/bunny": "@dev",
+        "vatradar/configurator": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "roave/security-advisories": "*",
+        "psy/psysh": "*",
+        "phpstan/phpstan": "*",
+        "phpstan/phpstan-deprecation-rules": "*",
+        "phpunit/phpunit": "*",
+        "phpstan/extension-installer": "*",
+        "spaze/phpstan-disallowed-calls": "*",
+        "phpstan/phpstan-phpunit": "*"
+    },
+    "config": {
+        "bin-dir": "vbin",
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "repositories": [
+        {"type": "composer", "url": "https://vatradar.repo.repman.io"}
+    ]
+}
