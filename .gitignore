@@ -1,6 +1,10 @@
 # .env
 .env
 
+# Project-specific
+/debug
+/php.ini
+/stack.yml
 
 ### Composer template
 composer.phar

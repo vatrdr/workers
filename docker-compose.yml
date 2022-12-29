@@ -1,0 +1,53 @@
+version: "3.9"
+services:
+  incomingdata:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - ./php.ini:/usr/local/etc/php/conf.d/vatradar.ini
+    entrypoint: php /app/entrypoint/incomingdata.php
+    deploy:
+      mode: replicated
+      replicas: 1
+    restart: on-failure
+
+  redis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - ./php.ini:/usr/local/etc/php/conf.d/vatradar.ini
+    entrypoint: php /app/entrypoint/redisworkers.php
+    deploy:
+      mode: replicated
+      replicas: 1
+    restart: on-failure
+
+  influxwriter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - .:/app
+      - ./php.ini:/usr/local/etc/php/conf.d/vatradar.ini
+    entrypoint: php /app/entrypoint/influxwriter.php
+    deploy:
+      mode: replicated
+      replicas: 2
+    restart: on-failure
+
+  influx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - .:/app
+      - ./php.ini:/usr/local/etc/php/conf.d/vatradar.ini
+    entrypoint: php /app/entrypoint/influxworkers.php
+    deploy:
+      mode: replicated
+      replicas: 1
+    restart: on-failure
