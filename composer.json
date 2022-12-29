@@ -18,7 +18,14 @@
         "influxdata/influxdb-client-php": "^3",
         "appwrite/appwrite": "^7",
         "bunny/bunny": "@dev",
-        "vatradar/configurator": "^1.0"
+        "vatradar/configurator": "^1.0",
+        "vlucas/phpdotenv": "^5.5",
+        "react/event-loop": "^1.3",
+        "vatradar/dataobjects": "^0.1.0",
+        "guzzlehttp/guzzle": "^7.5",
+        "predis/predis": "^2.0",
+        "react/async": "^4.0",
+        "react/promise": "^2.9"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
