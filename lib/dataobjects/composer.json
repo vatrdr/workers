@@ -1,0 +1,23 @@
+{
+    "name": "vatradar/dataobjects",
+    "description": "VATSIM Data Objects",
+    "type": "library",
+    "license": "LGPL-3.0",
+    "autoload": {
+        "psr-4": {
+            "Vatradar\\Dataobjects\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "VATRadar Devs",
+            "email": "dev@vatradar.net"
+        }
+    ],
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "psy/psysh": "^0.11.9",
+        "phpstan/phpstan": "^1.9",
+        "phpunit/phpunit": "^9.5"
+    }
+}
