@@ -9,7 +9,7 @@ use Psr\Log\LoggerInterface;
 use React\Promise\PromiseInterface;
 use Vatradar\Dataobjects\Vatsim\Pilot;
 use Vatradar\Dataobjects\Vatsim\VatsimData;
-use Workers\DTO\Generic;
+use Vatradar\Dataobjects\DTO\Generic;
 use Workers\Exchange;
 use Workers\Factory\LoggerFactory;
 use Workers\RoutingKey;

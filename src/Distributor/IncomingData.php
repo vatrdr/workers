@@ -8,7 +8,7 @@ use Bunny\Message;
 use Psr\Log\LoggerInterface;
 use React\Promise\PromiseInterface;
 use Vatradar\Dataobjects\Vatsim\VatsimData;
-use Workers\DTO\PilotData;
+use Vatradar\Dataobjects\DTO\PilotData;
 use Workers\Exchange;
 use Workers\Factory\LoggerFactory;
 use Workers\RoutingKey;

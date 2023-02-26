@@ -5,7 +5,7 @@ namespace Workers\Redis;
 use React\Promise\PromiseInterface;
 use Throwable;
 use Vatradar\Dataobjects\Vatsim\Pilot;
-use Workers\CacheObj\TrackPoint;
+use Vatradar\Dataobjects\Cache\TrackPoint;
 use function React\Async\coroutine;
 use function React\Promise\all;
 

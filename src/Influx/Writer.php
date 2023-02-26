@@ -9,7 +9,7 @@ use InfluxDB2\WriteApi;
 use Psr\Log\LoggerInterface;
 use React\Promise\PromiseInterface;
 use Throwable;
-use Workers\DTO\Influx;
+use Vatradar\Dataobjects\DTO\Influx;
 use Workers\Factory\InfluxFactory;
 use Workers\Factory\LoggerFactory;
 use Workers\WorkerInterface;
