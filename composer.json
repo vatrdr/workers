@@ -34,7 +34,7 @@
         "monolog/monolog": "^3.2",
         "clue/redis-react": "^3@dev",
         "guzzlehttp/guzzle": "^7.5",
-        "vatradar/dataobjects": "^0.5"
+        "vatradar/dataobjects": "^0.6"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
@@ -56,7 +56,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "0.7-dev"
+            "dev-main": "0.6-dev"
         }
     },
     "repositories": [
