@@ -1,0 +1,61 @@
+version: "3.9"
+services:
+  incomingdata:
+    image: repo.example:5000/vatradar/workers:1.0.0
+    volumes:
+      - type: bind
+        source: ./workers
+        target: /app
+      - type: bind
+        source: ./workers/php.ini
+        target: /usr/local/etc/php/conf.d/vatradar.ini
+    entrypoint: php /app/entrypoint/incomingdata.php
+    deploy:
+      mode: replicated
+      replicas: 1
+    restart: on-failure
+
+  redis:
+    image: repo.example:5000/vatradar/workers:1.0.0
+    volumes:
+      - type: bind
+        source: ./workers
+        target: /app
+      - type: bind
+        source: ./workers/php.ini
+        target: /usr/local/etc/php/conf.d/vatradar.ini
+    entrypoint: php /app/entrypoint/redisworkers.php
+    deploy:
+      mode: replicated
+      replicas: 1
+    restart: on-failure
+
+  influxwriter:
+    image: repo.example:5000/vatradar/workers:1.0.0
+    volumes:
+      - type: bind
+        source: ./workers
+        target: /app
+      - type: bind
+        source: ./workers/php.ini
+        target: /usr/local/etc/php/conf.d/vatradar.ini
+    entrypoint: php /app/entrypoint/influxwriter.php
+    deploy:
+      mode: replicated
+      replicas: 2
+    restart: on-failure
+
+  influx:
+    image: repo.example:5000/vatradar/workers:1.0.0
+    volumes:
+    - type: bind
+      source: ./workers
+      target: /app
+    - type: bind
+      source: ./workers/php.ini
+      target: /usr/local/etc/php/conf.d/vatradar.ini
+    entrypoint: php /app/entrypoint/influxworkers.php
+    deploy:
+      mode: replicated
+      replicas: 1
+    restart: on-failure
