@@ -11,7 +11,7 @@ use InfluxDB2\Model\WritePrecision;
 use InfluxDB2\Point;
 use Psr\Log\LoggerInterface;
 use React\Promise\PromiseInterface;
-use Vatradar\Dataobjects\DTO\Influx;
+use VatRadar\DataObjects\DTO\Influx;
 use Workers\Exchange;
 use Workers\Factory\LoggerFactory;
 use Workers\RoutingKey;
